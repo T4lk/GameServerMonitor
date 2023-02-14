@@ -197,8 +197,8 @@ def alert_embed(server: Server, alert: Alert):
 
     query_time = datetime.now(tz=tz(server.style_data.get('timezone', 'Etc/UTC'))).strftime('%Y-%m-%d %I:%M:%S%p')
     query_time = t('embed.alert.footer.query_time', locale).format(query_time=query_time)
-    icon_url = 'https://avatars.githubusercontent.com/u/61296017'
-    embed.set_footer(text=f'DiscordGSM {__version__} | {query_time}', icon_url=icon_url)
+    icon_url = ''
+    embed.set_footer(text=f'Escape-Reality {__version__} | {query_time}', icon_url=icon_url)
 
     return embed
 
